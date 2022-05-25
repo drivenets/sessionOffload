@@ -234,6 +234,7 @@ message ipTunnelRequest {
       IPSecTunnel ipsecTunnel = 5;  // Tunnel that will be used for encapsulation, can be both
       GENEVE geneve = 6;
       NAT nat = 7;
+      VCMPBypass vcmpBypass = 8;
   };
 
 }
@@ -319,6 +320,10 @@ message IPV6Match {
 }
 
 message NAT {
+  uint32 sourceIp = 1;
+}
+
+message VCMPBypass {
   uint32 sourceIp = 1;
 }
 
